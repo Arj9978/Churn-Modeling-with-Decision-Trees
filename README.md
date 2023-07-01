@@ -27,3 +27,4 @@ Learn how to deploy your churn prediction model in real-world scenarios. Explore
 This repository aims to provide a comprehensive guide to churn modeling using decision trees, catering to both beginners and experienced data scientists. Whether you're new to machine learning or looking to expand your knowledge, this project will equip you with the necessary tools and techniques to build accurate churn prediction models.
 
 # URL of Web Application
+https://churn-modeling-with-decision-trees-5tvkietzz57.streamlit.app/
