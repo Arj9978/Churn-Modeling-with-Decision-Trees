@@ -67,20 +67,13 @@ def predict():
     cols_to_scale = ['tenure','MonthlyCharges','TotalCharges']
     scaler = MinMaxScaler()
     X[cols_to_scale] = scaler.fit_transform(X[cols_to_scale])
-
-#     # Perform one-hot encoding for the address input
-#     address_dummy = pd.get_dummies([Address], columns=['Address'], prefix='', prefix_sep='')
-
-#     # Align the address columns with the training data columns
-#     address_dummy = address_dummy.reindex(columns=addresses, fill_value=0)
-
-#     # Concatenate the address columns with the input data
-#     X = pd.concat([X, address_dummy], axis=1)
-#     st.write(X)
-
     X = np.array(X)
     st.write(X)
     prediction = model.predict(X)
+    if prediction[0] == 1: 
+        st.success('User Stay :thumbsup:')
+    else: 
+        st.error('User did not Stay :thumbsdown:')
     st.write(prediction)
 
 trigger = st.button('Predict', on_click=predict)
