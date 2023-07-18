@@ -23,7 +23,7 @@ st.title('Churn Modeling with Decision Trees')
 # InternetService_Mailed check
 st.code("0: No, 1: Yes")
 
-Gender  = st.selectbox("Define The Gender:", [0,1])
+Gender  = st.selectbox("Define The Gender (woman:0, man:1):", [0,1])
 SeniorCitizen  = st.selectbox("Define SeniorCitizen Situation:", [0,1])
 Partner  = st.selectbox("Do You have Partner:", [0,1])
 Dependents  = st.selectbox("Do you have Dependents:", [0,1])
